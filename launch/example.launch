@@ -1,0 +1,9 @@
+<launch>
+   <node name="stereo_synchronizer" pkg="cwru_stereo_sync" type="stereo_sync_node" output="screen">
+    <remap from="unsynced/left/image_raw" to="desired_input/left/image_raw" />
+    <remap from="unsynced/right/image_raw" to="desired_input/right/image_raw" />
+    
+    <remap from="synced/left/image_raw" to="desired_output/right/image_raw" />
+    <remap from="synced/right/image_raw" to="desired_output/left/image_raw" />
+   </node>
+</launch>
